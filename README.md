@@ -13,8 +13,7 @@ This setup provides a **secure reverse proxy** configuration using **Nginx** to 
 │   ├── cert.crt
 │   └── key.key
 └── nginx
-    └── conf.d
-        └── nginx.conf
+    └── nginx.conf
 ```
 
 ---
@@ -42,7 +41,7 @@ services:
       - "80:80"
       - "443:443"
     volumes:
-      - ./nginx/conf.d:/etc/nginx/conf.d:ro
+      - ./nginx:/etc/nginx/conf.d:ro
       - ./certs:/etc/nginx/certs:ro
 ```
 
